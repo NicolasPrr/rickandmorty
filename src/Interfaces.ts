@@ -17,8 +17,10 @@ export interface IFilterCharacter extends Record<string, any> {
     gender?: Tgender
 }
 
+
 export interface ICharacter {
     created: string,
+    id: number,
     episode: string[],
     gender: Tgender,
     image: string,
@@ -51,4 +53,12 @@ export interface IfilterCharacters {
     species?: string,
     type?: string ,
     gender?:Tgender,
+}
+
+export interface IEpisode {
+    air_date: string,
+    characters: string[],
+    name: string,
+    episode: string,
+    id: number,
 }

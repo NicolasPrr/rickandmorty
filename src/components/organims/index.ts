@@ -1,1 +1,2 @@
-export {default as OCharacter } from './Character'
+export {default as Character} from './Character'
+export {default as Characterlist } from './CharacterList'
