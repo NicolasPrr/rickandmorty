@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/nicolasprr/rickandmorty/static/css/main.ebbdcc75.chunk.css",
-    "main.js": "/nicolasprr/rickandmorty/static/js/main.9fd2fc6a.chunk.js",
-    "main.js.map": "/nicolasprr/rickandmorty/static/js/main.9fd2fc6a.chunk.js.map",
-    "runtime-main.js": "/nicolasprr/rickandmorty/static/js/runtime-main.0cb67615.js",
-    "runtime-main.js.map": "/nicolasprr/rickandmorty/static/js/runtime-main.0cb67615.js.map",
-    "static/js/2.c5cc510d.chunk.js": "/nicolasprr/rickandmorty/static/js/2.c5cc510d.chunk.js",
-    "static/js/2.c5cc510d.chunk.js.map": "/nicolasprr/rickandmorty/static/js/2.c5cc510d.chunk.js.map",
-    "static/js/3.18610dc7.chunk.js": "/nicolasprr/rickandmorty/static/js/3.18610dc7.chunk.js",
-    "static/js/3.18610dc7.chunk.js.map": "/nicolasprr/rickandmorty/static/js/3.18610dc7.chunk.js.map",
-    "index.html": "/nicolasprr/rickandmorty/index.html",
-    "static/css/main.ebbdcc75.chunk.css.map": "/nicolasprr/rickandmorty/static/css/main.ebbdcc75.chunk.css.map",
-    "static/js/2.c5cc510d.chunk.js.LICENSE.txt": "/nicolasprr/rickandmorty/static/js/2.c5cc510d.chunk.js.LICENSE.txt"
+    "main.css": "/rickandmorty/static/css/main.ebbdcc75.chunk.css",
+    "main.js": "/rickandmorty/static/js/main.9fd2fc6a.chunk.js",
+    "main.js.map": "/rickandmorty/static/js/main.9fd2fc6a.chunk.js.map",
+    "runtime-main.js": "/rickandmorty/static/js/runtime-main.c23e8010.js",
+    "runtime-main.js.map": "/rickandmorty/static/js/runtime-main.c23e8010.js.map",
+    "static/js/2.50a8fdbb.chunk.js": "/rickandmorty/static/js/2.50a8fdbb.chunk.js",
+    "static/js/2.50a8fdbb.chunk.js.map": "/rickandmorty/static/js/2.50a8fdbb.chunk.js.map",
+    "static/js/3.18610dc7.chunk.js": "/rickandmorty/static/js/3.18610dc7.chunk.js",
+    "static/js/3.18610dc7.chunk.js.map": "/rickandmorty/static/js/3.18610dc7.chunk.js.map",
+    "index.html": "/rickandmorty/index.html",
+    "static/css/main.ebbdcc75.chunk.css.map": "/rickandmorty/static/css/main.ebbdcc75.chunk.css.map",
+    "static/js/2.50a8fdbb.chunk.js.LICENSE.txt": "/rickandmorty/static/js/2.50a8fdbb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0cb67615.js",
-    "static/js/2.c5cc510d.chunk.js",
+    "static/js/runtime-main.c23e8010.js",
+    "static/js/2.50a8fdbb.chunk.js",
     "static/css/main.ebbdcc75.chunk.css",
     "static/js/main.9fd2fc6a.chunk.js"
   ]
