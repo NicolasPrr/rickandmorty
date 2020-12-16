@@ -3,7 +3,7 @@ import { Layout} from 'antd'
 
 
 import { Header } from './components/molecules'
-import { Characterlist, Character, EpisodeList  } from '@orgnamins'
+import { Characterlist, Character, EpisodeList, Episode  } from '@orgnamins'
 
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ const { Content } = Layout
 const rts = [
     { path: "/characters", name: "Characters", Component:Characterlist },
     { path: "/character/:id", name: "Character", Component: Character },
-    { path: "/episode/:id", name: "Character", Component: Character },
+    { path: "/episode/:id", name: "Character", Component: Episode },
     { path: "/episodes", name: "Character", Component: EpisodeList },
     { path: "/*", name: "Characters", Component: Characterlist }
 ]

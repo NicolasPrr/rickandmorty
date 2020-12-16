@@ -1,8 +1,8 @@
 import React from 'react'
-import { Input, Button, Select, Form, notification } from 'antd'
+import { Input, Button, Form, notification } from 'antd'
 import styled from 'styled-components'
 import { SearchOutlined } from '@ant-design/icons'
-import { filterCharacters, filterEpisodes } from '@helpers'
+import {  filterEpisodes } from '@helpers'
 import { IFilterCharacter, ICharacter, IinfoReq } from '@interfaces'
 const { Item } = Form
 

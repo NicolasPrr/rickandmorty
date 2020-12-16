@@ -35,6 +35,15 @@ export const getCharacter = (id: string) => {
     })
     return promise
 }
+export const getEpisode = (id: string) => {
+
+    let promise = new Promise((resolve, reject) => {
+        axios.get(`${episodes}${id}`).then(res => {
+            resolve(res)
+        }).catch(err => reject(err))
+    })
+    return promise
+}
 export const filterCharacters = (data: IFilterCharacter) => {
     const query = queryString.stringify(data)
     let promise = new Promise((resolve, reject) => {
@@ -62,6 +71,16 @@ const getQueryEpisodes = (data: string[] = []) : string =>{
     return str
 }
 export const getSetEpisodes = (data: string[] = []) => 
+{
+    const eps = getQueryEpisodes(data)
+    let promise = new Promise((resolve, reject) => {
+        axios.get(eps).then(res => {
+            resolve(res)
+        })
+    })
+    return promise
+}
+export const getSetCharacters = (data: string[] = []) => 
 {
     const eps = getQueryEpisodes(data)
     let promise = new Promise((resolve, reject) => {
