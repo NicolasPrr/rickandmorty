@@ -7,7 +7,15 @@ export interface IRoute {
 }
 
 export type  Tstatus  = "Alive" | "Dead"| "unknown"
-export type  Tgender  = "Female" | "Male" | "Genderless" | "unkown"
+export type  Tgender  = "Female" | "Male" | "Genderless" | "unknown"
+
+
+export interface IFilterCharacter extends Record<string, any> {
+    name?: string,
+    status?: Tstatus,
+    type?: string,
+    gender?: Tgender
+}
 
 export interface ICharacter {
     created: string,
@@ -32,6 +40,10 @@ export interface IinfoReqCharacter {
     pages: number,
     next: string | null,
     prev: string | null,
+}
+export interface IResultFilterCharacter {
+    results: ICharacter[],
+    info: IinfoReqCharacter    
 }
 export interface IfilterCharacters {
     name?: string,

@@ -1,0 +1,1 @@
+export {default as OCharacter } from './Character'
