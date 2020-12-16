@@ -16,6 +16,10 @@ export interface IFilterCharacter extends Record<string, any> {
     type?: string,
     gender?: Tgender
 }
+export interface IFilterEpisode extends Record<string, any> {
+    name?: string,
+    code?: string,
+}
 
 
 export interface ICharacter {
@@ -37,15 +41,15 @@ export interface Ilocation {
     name: string,
     url: string,
 }
-export interface IinfoReqCharacter {
+export interface IinfoReq {
     count: number,
     pages: number,
     next: string | null,
     prev: string | null,
 }
-export interface IResultFilterCharacter {
+export interface IResultFilter {
     results: ICharacter[],
-    info: IinfoReqCharacter    
+    info: IinfoReq    
 }
 export interface IfilterCharacters {
     name?: string,

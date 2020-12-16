@@ -1,9 +1,9 @@
 import React from 'react'
 import { Card, DIcon } from '@atoms'
-import { Tooltip, Typography } from 'antd'
+import { Tooltip, } from 'antd'
 import { ICharacter, Tstatus } from '@interfaces'
-import { QuestionCircleOutlined} from '@ant-design/icons'
-import {Link} from 'react-router-dom'
+import { QuestionCircleOutlined } from '@ant-design/icons'
+import { Link } from 'react-router-dom'
 type WithChildren<T = {}> =
   T & { children?: React.ReactNode | string };
 
@@ -28,7 +28,7 @@ const DescriptionStatus = ({ status, specie }: DescriptionProps) => {
 const CharacterCard = ({ children, character }: CardProps) => (
   <Card size="small"
     hoverable
-    title={<Link to={`/character/${character.id}`}><Typography.Link strong>{character?.name}</Typography.Link></Link>}
+    title={<Link to={`/character/${character.id}`}>{character?.name}</Link>}
     cover={<img alt={character?.name} src={character?.image} />}
   >
     <Card.Meta
@@ -36,7 +36,6 @@ const CharacterCard = ({ children, character }: CardProps) => (
 
     />
     Episodes {character?.episode.length}<br />
-    {children}
   </Card>
 )
 export default CharacterCard

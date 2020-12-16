@@ -8,7 +8,7 @@ const EpisodeCard = ({ episode }: Props) => (
 
     <Card size={"small"} style={{ height: "auto" }}>
         <Card.Meta
-            title={<Tooltip title={episode.name}> <Link to={`episode/${episode.id}`}>{episode.name}</Link> </Tooltip>}
+            title={<Tooltip title={episode.name}> <Link to={`/episode/${episode.id}`}>{episode.name}</Link> </Tooltip>}
             description={episode.episode}
         />
         Emition: {episode?.air_date}

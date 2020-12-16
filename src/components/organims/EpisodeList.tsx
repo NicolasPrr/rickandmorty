@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from 'react'
+import { Pagination, Card, Typography, Space } from 'antd'
 
-import { Card, Pagination, Typography, Space } from 'antd'
-import { CharacterSearch, CharacterCard } from '@molecules'
-import { IinfoReq, ICharacter } from '@interfaces'
+import { IEpisode, IinfoReq } from "@interfaces"
+import { filterEpisodes, getEpisodes } from '@helpers'
 import { WrapperItems } from '@atoms'
-import { getCharacters, filterCharacters } from '@helpers'
-
-
-const Character = () => {
-    const [characters, setCharacters] = useState<ICharacter[]>()
+import { EpisodeCard, EpisodeSearch } from '@molecules'
+const EpisodeList = () => {
+    const [episodes, setEpisode] = useState<IEpisode[]>([])
     const [info, setInfo] = useState<IinfoReq>()
     const [query, setQuery] = useState<any>()
     const [currentPage, setCurrentPage] = useState<number>(1)
 
     useEffect(() => {
-        getCharacters().then((res: any) => {
-            const characterList = res.data.results
+        // alert('asdad')
+        getEpisodes().then((res: any) => {
+            const episodeList: IEpisode[] = res.data.results
             const info: IinfoReq = res.data.info
             setInfo(info)
-            setCharacters(characterList)
+            setEpisode(episodeList)
         })
     }, [])
 
@@ -29,17 +28,18 @@ const Character = () => {
 
     const handleChangePage = (page: number) => {
         setCurrentPage(page)
-        filterCharacters({ ...query, page }).then((res: any) => {
-            const characterList = res.data.results
+        filterEpisodes({ ...query, page }).then((res: any) => {
+            const epiList: IEpisode[] = res.data.results
             const info: IinfoReq = res.data.info
             setInfo(info)
-            setCharacters(characterList)
+            setEpisode(epiList)
         })
     }
     return (
         <>
             <Card>
-                <CharacterSearch setCharacters={setCharacters} setInfo={setInfo} setQuery={setQuery} />
+
+                <EpisodeSearch setEpisodes={setEpisode} setInfo={setInfo} setQuery={setQuery} />
                 <Space align="center">
                     <Typography.Text strong>
                         Characters: {info?.count}
@@ -52,16 +52,11 @@ const Character = () => {
                 </Space>
             </Card>
             <WrapperItems>
-
-                {characters?.map(character =>
-                    <CharacterCard key={character.id} character={character} />
-                )}
+                {episodes.map(ep => <EpisodeCard key={ep.id} episode={ep} />)}
 
             </WrapperItems>
-
-
         </>
-    )
 
+    )
 }
-export default Character
+export default EpisodeList 

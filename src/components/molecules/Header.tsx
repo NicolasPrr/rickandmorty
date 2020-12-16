@@ -1,24 +1,26 @@
 import React from 'react'
 import { Menu } from 'antd'
-
+import { useHistory } from 'react-router-dom'
 const { Item } = Menu
 
-const MainHeader = () => (
-    <Menu mode="horizontal" defaultSelectedKeys={["0"]}>
+const MainHeader = () => {
+    const history = useHistory()
+    const handleClick = (event: any ) => {
+        history.push(`/${event.key}`)
 
-        <Item key='0'>
-            Personajes
+    }
+    return (
+        <Menu onClick={handleClick} mode="horizontal" defaultSelectedKeys={["characters"]}>
 
-                </Item>
-        <Item key='1'>
-            Episodios
-
-                </Item>
-        <Item key='2'>
-            Localizaciones
+            <Item key='characters'>
+                Characters
 
                 </Item>
+            <Item key='episodes'>
+                Episodes
 
-    </Menu>
-)
+                </Item>
+        </Menu>
+    )
+}
 export default MainHeader

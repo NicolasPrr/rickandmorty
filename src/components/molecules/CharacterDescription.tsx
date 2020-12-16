@@ -1,7 +1,6 @@
 import React from 'react'
 import { ICharacter } from '@interfaces'
 
-import { Link } from 'react-router-dom'
 import { Descriptions } from 'antd'
 
 type Props = { character: ICharacter }
@@ -9,7 +8,7 @@ const DescriptionCharacter = ({ character }: Props) => (
 
     <Descriptions>
         <Descriptions.Item label="Location">
-            <Link to=""> {character?.location.name}</Link>
+            {character?.location.name}
         </Descriptions.Item>
         <Descriptions.Item label="Genero">
             {character?.gender}
@@ -18,7 +17,7 @@ const DescriptionCharacter = ({ character }: Props) => (
             {character?.status}
         </Descriptions.Item>
         <Descriptions.Item label="Origin">
-            <Link to=""> {character?.origin.name}</Link>
+            {character?.origin.name}
         </Descriptions.Item>
         <Descriptions.Item label="Specie">
             {character?.species}

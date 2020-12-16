@@ -9,7 +9,7 @@ import { Typography, Card } from 'antd'
 
 const Character = () => {
     const [character, setCharacter] = useState<ICharacter>()
-    const [episodes, setEpisodes] = useState<IEpisode[]>()
+    const [episodes, setEpisodes] = useState<IEpisode[]>([])
     const params: { id: string } = useParams()
     useEffect(() => {
         getCharacter(params.id).then((res: any) => {
@@ -19,8 +19,8 @@ const Character = () => {
     useEffect(() => {
         if (character?.episode) {
             getSetEpisodes(character?.episode).then((res: any) => {
-                setEpisodes(res.data)
-
+                const data  = res.data.length? res.data : [res.data]
+                setEpisodes(data)
             })
 
         }
@@ -37,7 +37,7 @@ const Character = () => {
                 <Typography.Title level={5}> Episodes </Typography.Title>
                 <WrapperItems>
 
-                    {episodes?.map(ep => <EpisodeCard episode={ep} />)}
+                    {episodes?.map(ep => <EpisodeCard key={ep.id} episode={ep} />)}
 
                 </WrapperItems>
             </Card>
