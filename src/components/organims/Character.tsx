@@ -5,9 +5,7 @@ import { useParams } from 'react-router-dom'
 import { WrapperCharacter, WrapperItems } from '@atoms'
 import { CharacterCard, CharacterDescription, EpisodeCard } from '@molecules'
 
-import { Link } from 'react-router-dom'
-
-import { Typography, Descriptions, Card } from 'antd'
+import { Typography, Card } from 'antd'
 
 const Character = () => {
     const [character, setCharacter] = useState<ICharacter>()
@@ -17,7 +15,7 @@ const Character = () => {
         getCharacter(params.id).then((res: any) => {
             setCharacter(res.data)
         }).catch()
-    }, [])
+    }, [params.id])
     useEffect(() => {
         if (character?.episode) {
             getSetEpisodes(character?.episode).then((res: any) => {

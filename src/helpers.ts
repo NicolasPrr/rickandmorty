@@ -1,7 +1,7 @@
 import axios from 'axios'
 import queryString from 'query-string'
 import { BASE_URL, characters } from './constants'
-import { IFilterCharacter, IResultFilterCharacter } from '@interfaces'
+import { IFilterCharacter} from '@interfaces'
 
 axios.defaults.baseURL = BASE_URL
 

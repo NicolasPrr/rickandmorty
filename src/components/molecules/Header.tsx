@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+import { Menu } from 'antd'
 
 const { Item } = Menu
 

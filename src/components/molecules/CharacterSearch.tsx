@@ -3,7 +3,7 @@ import { Input, Button, Select, Form, notification } from 'antd'
 import styled from 'styled-components'
 import { SearchOutlined } from '@ant-design/icons'
 import { filterCharacters } from '@helpers'
-import { IFilterCharacter, ICharacter, IResultFilterCharacter, IinfoReqCharacter } from '@interfaces'
+import { IFilterCharacter, ICharacter, IinfoReqCharacter } from '@interfaces'
 const { Item } = Form
 
 const WraperHeader = styled.div`
