@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": "src",
+      "paths": {
+        "@atoms" : ["./components/atoms"],
+        "@molecules" : ["./components/molecules"],
+        "@interfaces" : ["./Interfaces.ts"],
+        "@helpers" : ["./helpers.ts"],
+
+        "@orgnamins" : ["./components/organims"],
+        "@templates" : ["./components/templates"],
+        "@pages" : ["./pages"]
+      }
+    }
+  }
