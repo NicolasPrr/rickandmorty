@@ -5,7 +5,7 @@ import { Layout} from 'antd'
 import { Header } from './components/molecules'
 import { Characterlist, Character, EpisodeList, Episode  } from '@orgnamins'
 
-import { Switch, BrowserRouter, Route } from 'react-router-dom'
+import { Switch, HashRouter, Route } from 'react-router-dom'
 
 const { Content } = Layout
 
@@ -25,7 +25,7 @@ const rts = [
 const Routes = () => {
 
     return (
-        <BrowserRouter>
+        <HashRouter basename="rickandmorty">
             <Layout>
                 <Header />
                 {/* <Breadcrumb>
@@ -49,7 +49,7 @@ const Routes = () => {
                     </Switch>
                 </Content>
             </Layout>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 export default Routes

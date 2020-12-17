@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Menu } from 'antd'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 const { Item } = Menu
 
 const MainHeader = () => {
     const history = useHistory()
-    const handleClick = (event: any ) => {
+    const location = useLocation()
+    const [currentItem, setCurrentItem] = useState<string[]  | any>("characters")
+    const handleClick = (event: any) => {
         history.push(`/${event.key}`)
-
     }
+    useEffect(() => setCurrentItem(location.pathname.replace("/", "")), [location.pathname])
     return (
-        <Menu onClick={handleClick} mode="horizontal" defaultSelectedKeys={["characters"]}>
+        <Menu onClick={handleClick} selectedKeys={currentItem} mode="horizontal" defaultSelectedKeys={["characters"]}>
 
             <Item key='characters'>
                 Characters
